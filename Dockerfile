@@ -38,7 +38,7 @@ RUN wget -q -O /etc/ssl/nginx/CA.crt https://cs.nginx.com/static/files/CA.crt
 RUN wget -q -O /etc/yum.repos.d/nginx-plus-7.repo https://cs.nginx.com/static/files/nginx-plus-7.repo
 
 # Install NGINX Plus
-RUN yum install -y nginx-plus
+RUN yum install -y nginx-plus-extras
 
 # forward request logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
