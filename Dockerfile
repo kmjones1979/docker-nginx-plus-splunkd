@@ -41,8 +41,8 @@ RUN wget -q -O /etc/yum.repos.d/nginx-plus-7.repo https://cs.nginx.com/static/fi
 RUN yum install -y nginx-plus-extras
 
 # forward request logs to docker log collector
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
+#RUN ln -sf /dev/stdout /var/log/nginx/access.log
+#RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 # copy static Nginx Plus files
 COPY etc/nginx /etc/nginx
